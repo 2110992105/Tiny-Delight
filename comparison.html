@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    
+</head>
+
+    
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-bread-slice"></i>Tiny Delight</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="about.html">about</a>
+            <a href="product.html">product</a>
+            <a href="gallery.html">gallery</a>
+            <a href="team.html">team</a>
+            <a href="login1.html">login</a>
+            <a href="#order">order</a>
+            <a href="comparison.html">Comparison</a>
+
+        </nav>  
+        <!-- <div class="icon">
+            <div id="cart" class="fas fa-shopping-cart"></div>
+            <div id="menu" class="fas fa-bars"></div>
+        </div> -->
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <!-- <i class="fas fa-bars" id="menu-bar"></i> -->
+        </div>
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <section class="comparison" id="comparison">
+        <h1 class="heading" style="color: rgb(67, 12, 12);"> <span>Product</span>Comparison </h1>
+        <label for="filter">Filter by Flavor:</label>
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="vanilla">Vanilla</option>
+            <!-- Add more flavor options as needed -->
+        </select>
+        <ul id="product-list">
+            <li>
+                <h2>Product 1</h2>
+                <p><strong>Brand:</strong> Brand A</p>
+                <p><strong>Flavor:</strong> Chocolate</p>
+                <p><strong>Size:</strong> 8 inches</p>
+                <p><strong>Price:</strong> $20.99</p>
+                <p><strong>Ingredients:</strong> Flour, sugar, cocoa</p>
+                <p><strong>Nutritional Info:</strong> Calories: 250</p>
+                <p><strong>Customer Rating:</strong> 4.5/5</p>
+            </li>
+            <li>
+                <h2>Product 2</h2>
+                <p><strong>Brand:</strong> Brand B</p>
+                <p><strong>Flavor:</strong> Vanilla</p>
+                <p><strong>Size:</strong> 10 inches</p>
+                <p><strong>Price:</strong> $17.99</p>
+                <p><strong>Ingredients:</strong> Flour, sugar, vanilla escense</p>
+                <p><strong>Nutritional Info:</strong> Calories: 200</p>
+                <p><strong>Customer Rating:</strong> 4.2/5</p>  
+            </li>
+            <!-- Add more list items for additional cake products -->
+        </ul>
+    </div>
+    <script>
+        // JavaScript for filtering products
+        const filterSelect = document.getElementById('filter');
+        const productList = document.getElementById('product-list').getElementsByTagName('li');
+
+        filterSelect.addEventListener('change', () => {
+            const selectedFlavor = filterSelect.value;
+            
+            for (const product of productList) {
+                const flavor = product.querySelector('p:nth-child(3)').textContent.toLowerCase();
+                if (selectedFlavor === 'all' || flavor.includes(selectedFlavor.toLowerCase())) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+
+        
+</body>
+</html>

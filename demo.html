@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #video-container {
+            position: relative; 
+            width: 100%;
+            max-width: 800px;
+            /* padding-bottom: 56.25%; */
+            /* 16:9 aspect ratio */
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+        }
+        #content {
+            /* padding-bottom: 20rem; */
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+        }
+</style>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-bread-slice"></i>Tiny Delight</a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="about.html">about</a>
+            <a href="product.html">product</a>
+            <a href="gallery.html">gallery</a>
+            <a href="team.html">team</a>
+            <a href="login1.html">login</a>
+            <a href="#order">order</a>
+            <a href="comparison.html">Comparison</a>
+
+        </nav>  
+        <!-- <div class="icon">
+            <div id="cart" class="fas fa-shopping-cart"></div>
+            <div id="menu" class="fas fa-bars"></div>
+        </div> -->
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <!-- <i class="fas fa-bars" id="menu-bar"></i> -->
+        </div>
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <section class="video">
+        <h1 class="heading">demo</h1>
+        <div class="video-container">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/HTXB6flODww?si=tZjCwAOdRezqp7C8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+        <div class="content">
+            <p>"Indulge your senses in a symphony of flavors and artistry as we unveil the magic behind our cake creation process – where every cake is a masterpiece baked with love and adorned with perfection."</p>
+        </div>
+    </section>
+  
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+</body>
+</html>
